@@ -1,0 +1,74 @@
+.menuToogle{
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    z-index: 1000;
+    transition: opacity, left .33s ease-in;
+}
+
+.menuToogle:hover{
+    opacity: .7;
+
+}
+
+.menuToogle.open{
+    left: 50%;
+}
+
+
+
+
+
+
+
+
+/*.button {*/
+/*    display: inline-block;*/
+/*    padding: 10px 20px;*/
+/*    border-radius: 4px;*/
+/*    border: 1px solid lightslategray;*/
+/*    color: black;*/
+/*    margin-right: 15px;*/
+/*    text-transform: uppercase;*/
+/*    font-weight: bold;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.button:focus {*/
+/*    outline: none;*/
+/*}*/
+
+/*.button:active {*/
+/*    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);*/
+/*}*/
+
+/*.button:disabled {*/
+/*    background: #cccccc;*/
+/*    color: black;*/
+/*    cursor: not-allowed;*/
+/*}*/
+
+/*.error {*/
+/*    background: rgba(240,87,108, 1);*/
+/*}*/
+
+/*.success {*/
+/*    background: rgba(161,249,69, 1);*/
+/*}*/
+
+/*.primary {*/
+/*    background: #2884f6;*/
+/*    color: white;*/
+
+/*}*/
+
+
+
+
+
+
+
+

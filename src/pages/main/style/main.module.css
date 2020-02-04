@@ -1,0 +1,154 @@
+.main {
+    min-height: 100vh;
+    background-color: #1f1f20;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    /*border: 1px solid;*/
+
+
+}
+
+
+.intro span {
+    display: flex;
+    flex-direction: column;
+
+    /*background-color: gray;*/
+}
+
+.intro span:nth-child(1) {
+    font-size: 16px;
+
+
+}
+
+.intro span:nth-child(2),
+.intro span:nth-child(2) span {
+    font-size: 30px;
+    font-weight: 700;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 0;
+}
+
+.intro span:nth-child(2) span:after {
+    content: "";
+    position: absolute;
+    width: 435px;
+    height: 20px;
+    bottom: -5px;
+    z-index: -1;
+    background-color: #ea548d;
+}
+
+.intro span:nth-child(3) {
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+
+    /*font-weight: 700;*/
+    /*font-stretch: normal;*/
+    /*font-size: 50px;*/
+    /*line-height: 1.2;*/
+    /*letter-spacing: 5px;*/
+}
+
+
+.photo {
+    /*width: 300px;*/
+    /*height: 400px;*/
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    transition: 500ms;
+
+
+}
+
+.photo:hover{
+    transform: scale(1.1, 1.1);
+}
+
+
+.img {
+    background-image: url("../../../assets/img/IMG_0016.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+
+}
+
+.img:before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 420px;
+    border: 5px solid #ea548d;
+    left: 15px;
+    top: -12px;
+    z-index: -1;
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .intro{
+        margin-top: 100px;
+    }
+    .container {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo{
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .img:before {
+
+        width: 270px;
+
+
+    }
+
+
+    /*.img:before {*/
+    /*    content: "";*/
+    /*    position: absolute;*/
+    /*    width: 300px;*/
+    /*    height: 400px;*/
+    /*    border: 5px solid #ea548d;*/
+    /*    left: 15px;*/
+    /*    top: -12px;*/
+    /*    z-index: -1;*/
+
+    /*}*/
+
+
+    .intro span:nth-child(2) span:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -5px;
+        z-index: -1;
+        background-color: #ea548d;
+    }
+
+
+}
