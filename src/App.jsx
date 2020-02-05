@@ -29,15 +29,11 @@ function App () {
           <Route path="/" exact render={() => <Main />} />
           <Route path="/catalog/:id?" render={() => <Catalog />} />
           <Route path="/contact" render={() => <Contact />} />
-
         </Switch>
 
         <Footer />
-
       </div>
-
     </div>
-
   )
 }
 

@@ -5,31 +5,23 @@ import Fade from 'react-reveal/Fade'
 const Main = props => {
   return (
     <div className={styles.main}>
-
       <Fade big cascade>
         <div className={styles.container}>
-
           <div className={styles.intro}>
+            <span>Hi</span>
             <span>
-                            Hi
-
+              {' '}
+              it is <span> Super Online Shop</span>
             </span>
-            <span>  it is <span> Super Online Shop</span></span>
             <span>
               <h1> we are best of the best </h1>
-
             </span>
-
           </div>
 
           <div className={styles.photo} />
-
         </div>
-
       </Fade>
-
     </div>
-
   )
 }
 

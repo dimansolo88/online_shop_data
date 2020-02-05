@@ -6,28 +6,26 @@
 /*    background-color: #252527;*/
 /*}*/
 
-.footerContainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 80%;
-    /*border: 1px solid;*/
-    padding: 60px 0;
-
-
+.footerContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  /*border: 1px solid;*/
+  padding: 60px 0;
 }
 
-.titleWrapper{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Josefin Sans', sans-serif;
-    line-height: 1.2;
-    letter-spacing: 5px;
-    font-weight: 300;
-    font-size: 16px;
-    text-transform: capitalize;
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: capitalize;
 }
 
 /*.line {*/
@@ -37,66 +35,56 @@
 /*    background-color: #e9548d;*/
 /*}*/
 
-.sicialBlock{
-    display: flex;
-    justify-content: space-between;
-    /*border: 1px solid;*/
-    width: 500px;
-    padding: 10px 0;
-
+.sicialBlock {
+  display: flex;
+  justify-content: space-between;
+  /*border: 1px solid;*/
+  width: 500px;
+  padding: 10px 0;
 }
 
-.socialIcon{
-    width: 60px;
-    height: 60px;
-    /*background-color: deepskyblue;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*background-color: rgba(255, 255, 255, 0.1);*/
-    background-color: #252527;
-    border: #4a4a4a 1px solid;
-    border-radius: 50px;
-    /*opacity: 0.8;*/
-    transition: all 0.5s ease-in-out;
+.socialIcon {
+  width: 60px;
+  height: 60px;
+  /*background-color: deepskyblue;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: rgba(255, 255, 255, 0.1);*/
+  background-color: #252527;
+  border: #4a4a4a 1px solid;
+  border-radius: 50px;
+  /*opacity: 0.8;*/
+  transition: all 0.5s ease-in-out;
 }
 
-.socialIcon:hover{
-    border: white 1px solid;
+.socialIcon:hover {
+  border: white 1px solid;
 }
-
-
 
 .socialIcon a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.socialIcon img{
-    width: 60%;
-    align-self: center;
-
+.socialIcon img {
+  width: 60%;
+  align-self: center;
 }
 
 @media screen and (max-width: 1100px) {
-    .sicialBlock{
-        width: 100%;
-    }
+  .sicialBlock {
+    width: 100%;
+  }
 }
-
 
 @media screen and (max-width: 340px) {
-    .socialIcon{
-        width: 50px;
-        height: 50px;
-
-
-    }
-    .blockTitle{
-        text-align: center;
-    }
+  .socialIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .blockTitle {
+    text-align: center;
+  }
 }
-
-
-

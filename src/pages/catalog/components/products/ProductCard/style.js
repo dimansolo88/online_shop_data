@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const WrapperProductCard = styled.div`
-    
-`
+export const WrapperProductCard = styled.div``
 
 // display: flex;
 // justify-content: center;

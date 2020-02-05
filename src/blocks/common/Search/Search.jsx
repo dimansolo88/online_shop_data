@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Input, WrapperSearch } from './style'
-import styles from '../../../pages/Contact/Contact.module.css'
+// import styles from '../../../pages/Contact/Contact.module.css'
 
 const Search = ({ setSearchFilter }) => {
   const [filterValue, setFilterValue] = useState('')
@@ -13,13 +13,12 @@ const Search = ({ setSearchFilter }) => {
   return (
     <WrapperSearch>
       <Input
-        className={styles.input}
+        // className={styles.input}
         type="text"
         placeholder="entry a name of products"
         value={filterValue}
         onChange={onFilterHandler} />
     </WrapperSearch>
-
   )
 }
 

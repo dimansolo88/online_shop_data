@@ -1,34 +1,33 @@
 import {
-  GET_PRODUCTS_SUCCESS, SORT_PRICE_UP
-  , SORT_PRICE_DOWN,
-  setProductsSuccess, SET_SEARCH_FILTER_VALUE,
+  setProductsSuccess,
+  SET_SEARCH_FILTER_VALUE,
+  SORT_PRODUCTS,
+  SET_PRODUCTS_SUCCESS,
 } from '../actions/products'
-
 import { api } from '../../api'
 
 const initiateState = {
   product: [],
-  sortByPriceFilter: '',
-  // price ascending
-  // price descending
+  sortFilter: '',
   searchProductsOnName: '',
-
 }
 
 export const product = (state = initiateState, action) => {
   switch (action.type) {
-    case GET_PRODUCTS_SUCCESS:
+    case SET_PRODUCTS_SUCCESS:
       return {
-        ...state, product: action.payload,
+        ...state,
+        product: action.payload,
       }
-    case SORT_PRICE_UP:
-    case SORT_PRICE_DOWN:
+    case SORT_PRODUCTS:
       return {
-        ...state, sortByPriceFilter: action.payload,
+        ...state,
+        sortFilter: action.payload,
       }
     case SET_SEARCH_FILTER_VALUE:
       return {
-        ...state, searchProductsOnName: action.payload,
+        ...state,
+        searchProductsOnName: action.payload,
       }
 
     default:

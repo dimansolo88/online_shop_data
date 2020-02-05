@@ -1,145 +1,127 @@
-.contact{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    background-color: #1f1f20;
+.contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1f1f20;
 }
 
-.container{
-    width: 80%;
-    /*border: 1px solid;*/
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/
-    align-items: center;
-    padding: 100px 0;
+.container {
+  width: 80%;
+  /*border: 1px solid;*/
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  padding: 100px 0;
 }
 
-.formWrapper{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
 }
 
-.titleContacts{
-    font-family: 'Josefin Sans', sans-serif;
-    line-height: 1.2;
-    letter-spacing: 5px;
-    font-weight: 300;
-    font-size: 30px;
-    text-transform: capitalize;
+.titleContacts {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  font-weight: 300;
+  font-size: 30px;
+  text-transform: capitalize;
 }
 
+/*font-family: 'Josefin Sans', sans-serif;*/
 
-    /*font-family: 'Josefin Sans', sans-serif;*/
-
-.button{
-    color: white;
-    max-width: 150px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    position: relative;
-    margin: 0 0 15px;
-    padding: 8px 30px ;
-    z-index: 0;
+.button {
+  color: white;
+  max-width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  position: relative;
+  margin: 0 0 15px;
+  padding: 8px 30px;
+  z-index: 0;
 }
 
-.button:after{
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 8px;
-    background-color: #ea548d;
-    transition: all 0.2s ease-in-out;
-    bottom: 10px;
-    z-index: -1;
-
+.button:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 8px;
+  background-color: #ea548d;
+  transition: all 0.2s ease-in-out;
+  bottom: 10px;
+  z-index: -1;
 }
 
-
-.button:hover{
-    color: white;
-    text-decoration: none;
-
+.button:hover {
+  color: white;
+  text-decoration: none;
 }
-.button:hover::after{border-radius: 10px;
+.button:hover::after {
+  border-radius: 10px;
 
-    bottom: 0;
-    width: 60%;
-    height: 100%;
-
-
+  bottom: 0;
+  width: 60%;
+  height: 100%;
 }
-
-
-
 
 .input {
-    background-color: #252527;
-    border: 1px solid #4a4a4a;
-    font-size: 12px;
-    color: white;
-    outline: none;
-    padding: 5px;
-    margin: 10px 0;
-    transition: all 0.5s ease-in-out;
-
+  background-color: #252527;
+  border: 1px solid #4a4a4a;
+  font-size: 12px;
+  color: white;
+  outline: none;
+  padding: 5px;
+  margin: 10px 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .textarea {
-    min-height: 160px;
-    background-color: #252527;
-    border: 1px solid #4a4a4a;
-    color: white;
-    font-size: 12px;
-    outline: none;
-    padding: 5px;
-    margin: 10px 0;
-    transition: all 0.5s ease-in-out;
-
+  min-height: 160px;
+  background-color: #252527;
+  border: 1px solid #4a4a4a;
+  color: white;
+  font-size: 12px;
+  outline: none;
+  padding: 5px;
+  margin: 10px 0;
+  transition: all 0.5s ease-in-out;
 }
 
-.input:focus, .textarea:focus{
-    border: 1px solid transparent;
+.input:focus,
+.textarea:focus {
+  border: 1px solid transparent;
 }
-
-
 
 @media screen and (max-width: 1100px) {
-        .formWrapper{
-            width: 100%;
-        }
+  .formWrapper {
+    width: 100%;
+  }
 
-    .button:after{
+  .button:after {
+    width: 0;
+    height: 0;
+  }
 
-        width: 0;
-        height: 0;
+  .button:hover::after {
+    border-radius: 0;
 
-
-    }
-
-    .button:hover::after{border-radius: 0;
-
-        bottom: 0;
-        width: 0;
-        height: 0;
-
-
-    }
+    bottom: 0;
+    width: 0;
+    height: 0;
+  }
 }
-
-
-

@@ -10,15 +10,17 @@ const Products = ({ products, getProduct }) => {
 
   return (
     <div className={styles.projectWraper}>
-      {products.map(p => <ProductCard
-        key={p.id} id={p.id}
-        title={p.title}
-        size={p.size}
-        price={p.price}
-        images={p.images} />)}
+      {products.map(p => (
+        <ProductCard
+          key={p.id}
+          id={p.id}
+          title={p.title}
+          size={p.size}
+          price={p.price}
+          images={p.images} />
+      ))}
     </div>
   )
 }
-
 
 export default Products
