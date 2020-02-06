@@ -1,3 +1,3 @@
-export const SORT_PRICE_UP = 'PRICE_HIGH_TO_LOW'
-export const SORT_PRICE_DOWN = 'PRICE_LOW_TO_HIGH'
-export const OUR_FAVORITES = 'OUR_FAVORITES'
+export const SORT_PRICE_UP = "PRICE_HIGH_TO_LOW";
+export const SORT_PRICE_DOWN = "PRICE_LOW_TO_HIGH";
+export const OUR_FAVORITES = "OUR_FAVORITES";

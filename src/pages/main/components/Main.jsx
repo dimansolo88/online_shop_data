@@ -1,8 +1,8 @@
-import React from 'react'
-import styles from '../style/main.module.css'
-import Fade from 'react-reveal/Fade'
+import React from "react";
+import styles from "../style/main.module.css";
+import Fade from "react-reveal/Fade";
 
-const Main = props => {
+const Main = () => {
   return (
     <div className={styles.main}>
       <Fade big cascade>
@@ -10,7 +10,7 @@ const Main = props => {
           <div className={styles.intro}>
             <span>Hi</span>
             <span>
-              {' '}
+              {" "}
               it is <span> Super Online Shop</span>
             </span>
             <span>
@@ -22,7 +22,7 @@ const Main = props => {
         </div>
       </Fade>
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

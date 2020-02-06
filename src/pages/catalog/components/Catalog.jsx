@@ -1,20 +1,20 @@
-import React from 'react'
-import styles from './catalog.module.css'
-import Fade from 'react-reveal/Fade'
-import Products from './products/Products'
-import Search from '../../../blocks/common/Search/Search'
-import { connect } from 'react-redux'
-import { getProductsSelector } from '../../../store/reducers/selectors/getProductsSelector'
-import { compose } from 'redux'
-import { withRouter } from 'react-router-dom'
-import { getProduct } from '../../../store/reducers/product'
-import { setSearchFilter, sort } from '../../../store/actions/products'
-import { Sort } from '../../../test'
-import { LineWrapper } from '../../../blocks/common/line/style'
+import React from "react";
+import styles from "./catalog.module.css";
+import Fade from "react-reveal/Fade";
+import Products from "./products/Products";
+import Search from "../../../blocks/common/Search/Search";
+import { connect } from "react-redux";
+import { getProductsSelector } from "../../../store/reducers/selectors/getProductsSelector";
+import { compose } from "redux";
+import { withRouter } from "react-router-dom";
+import { getProduct } from "../../../store/reducers/product";
+import { setSearchFilter, sort } from "../../../store/actions/products";
+import { Sort } from "../../../test";
+import { LineWrapper } from "../../../blocks/common/line/style";
 
 const Catalog = React.memo(
   ({ products, setSearchFilter, getProduct, sort }) => {
-    console.log('render catalog')
+    console.log("render catalog");
     return (
       <div className={styles.myProjects}>
         <Fade big cascade>
@@ -32,18 +32,18 @@ const Catalog = React.memo(
           </div>
         </Fade>
       </div>
-    )
-  },
-)
+    );
+  }
+);
 
 const mapStateToProps = state => ({
-  products: getProductsSelector(state),
-})
+  products: getProductsSelector(state)
+});
 export default compose(
   withRouter,
   connect(mapStateToProps, {
     getProduct,
     setSearchFilter,
-    sort,
-  }),
-)(Catalog)
+    sort
+  })
+)(Catalog);

@@ -1,28 +1,29 @@
-import React, { Component } from 'react'
-import styles from './Header.module.css'
-import Roll from 'react-reveal/Roll'
-import { NavLink } from 'react-router-dom'
-import MenuToggle from '../common/menuToogle/MenuToogle'
-import { HeaderWrapper } from './style'
+import React, { Component } from "react";
+import styles from "./Header.module.css";
+import Roll from "react-reveal/Roll";
+import { NavLink } from "react-router-dom";
+import MenuToggle from "../common/menuToogle/MenuToogle";
+import { HeaderWrapper } from "./style";
 
 class Header extends Component {
   state = {
-    menu: false,
+    menu: false
   };
 
   toogleMenu = () => {
     this.setState({
-      menu: !this.state.menu,
-    })
+      menu: !this.state.menu
+    });
   };
 
-  render () {
+  render() {
     return (
       <HeaderWrapper>
         <div className={styles.navMobile}>
           <MenuToggle
             handleonToogle={this.toogleMenu}
-            isOpen={this.state.menu} />
+            isOpen={this.state.menu}
+          />
         </div>
 
         <nav className={styles.nav}>
@@ -49,8 +50,8 @@ class Header extends Component {
           )}
         </div>
       </HeaderWrapper>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

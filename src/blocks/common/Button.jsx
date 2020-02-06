@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from '../../pages/Contact/Contact.module.css'
+import React from "react";
+import styles from "../../pages/Contact/Contact.module.css";
 
 const Button = ({ type, value, children }) => {
   return (
@@ -8,7 +8,7 @@ const Button = ({ type, value, children }) => {
         {children}
       </button>
     </>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

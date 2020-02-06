@@ -1,8 +1,8 @@
-import React from 'react'
-import styles from './Contact.module.css'
-import Fade from 'react-reveal/Fade'
-import Button from '../../blocks/common/Button'
-import { LineWrapper } from '../../blocks/common/line/style'
+import React from "react";
+import styles from "./Contact.module.css";
+import Fade from "react-reveal/Fade";
+import Button from "../../blocks/common/Button";
+import { LineWrapper } from "../../blocks/common/line/style";
 
 const Contact = () => {
   return (
@@ -21,18 +21,21 @@ const Contact = () => {
               type="text"
               name="name"
               className={styles.input}
-              placeholder="Your name" />
+              placeholder="Your name"
+            />
             <input
               type="text"
               name="_replyto"
               className={styles.input}
-              placeholder="Your e-mail" />
+              placeholder="Your e-mail"
+            />
             <textarea
               name="name"
               cols="30"
               rows="10"
               className={styles.textarea}
-              placeholder="your message" />
+              placeholder="your message"
+            />
             <Button type="submit" value="send">
               send
             </Button>
@@ -40,7 +43,7 @@ const Contact = () => {
         </Fade>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

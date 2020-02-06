@@ -1,9 +1,18 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
+
+export const theme1 = {
+  primary: "#FFFFFF",
+  secondary: "#a9a9a9"
+};
+
+export const theme2 = {
+  primary: "#252527",
+  secondary: "#1f1f20"
+};
 
 export const GlobalStyle = createGlobalStyle`
 html,
 body {
-
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -19,9 +28,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+h1, h2, h3{color:white}
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 
-`
+`;

@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from '../../catalog.module.css'
-import Button from '../../../../../blocks/common/Button'
+import React from "react";
+import styles from "../../catalog.module.css";
+import Button from "../../../../../blocks/common/Button";
 
 const ProductCard = ({ images, title, size, price }) => {
   return (
@@ -15,7 +15,7 @@ const ProductCard = ({ images, title, size, price }) => {
         <Button> more </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;

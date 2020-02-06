@@ -1,12 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   position: relative;
   display: flex;
   justify-content: center;
   height: 300px;
-  background-color: ${props => (props.light ? props.light : '#252527')};
-`
+  background-color: ${props => props.theme.primary};
+`;
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   width: 80%;
   padding: 60px 0;
-`
+`;
 
 export const TitleWrapper = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const TitleWrapper = styled.div`
   font-weight: 300;
   font-size: 16px;
   text-transform: capitalize;
-`
+`;
 
 export const SocialBlock = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ export const SocialBlock = styled.div`
   @media screen and (max-width: 1100px) {
     width: 100%;
   }
-`
+`;
 export const SocialIcon = styled.div`
   width: 60px;
   height: 60px;
@@ -51,15 +51,15 @@ export const SocialIcon = styled.div`
   &:hover {
     border: white 1px solid;
   }
-`
+`;
 
 export const SocialIconLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const SocialIconImg = styled.img`
   width: 60%;
   align-self: center;
-`
+`;
