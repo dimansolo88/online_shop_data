@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -14,4 +14,4 @@ export const HeaderWrapper = styled.header`
     opacity: 10;
     background-color: transparent;
   }
-`;
+`

@@ -1,28 +1,29 @@
-import React from "react";
-import styles from "../style/main.module.css";
-import Fade from "react-reveal/Fade";
+import React from 'react'
+import styles from '../style/main.module.css'
+import Fade from 'react-reveal/Fade'
+import { Intro, MainWrapper } from '../style/style'
 
 const Main = () => {
   return (
-    <div className={styles.main}>
+    <MainWrapper>
       <Fade big cascade>
         <div className={styles.container}>
-          <div className={styles.intro}>
+          <Intro>
             <span>Hi</span>
             <span>
-              {" "}
+              {' '}
               it is <span> Super Online Shop</span>
             </span>
             <span>
               <h1> we are best of the best </h1>
             </span>
-          </div>
+          </Intro>
 
-          <div className={styles.photo} />
+          {/* <div className={styles.photo} /> */}
         </div>
       </Fade>
-    </div>
-  );
-};
+    </MainWrapper>
+  )
+}
 
-export default Main;
+export default Main

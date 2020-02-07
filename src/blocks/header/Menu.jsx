@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export const Menu = () => {
   return (
@@ -8,5 +8,5 @@ export const Menu = () => {
       <NavLink to="/catalog">Catalog</NavLink>
       <NavLink to="/contact">Contact</NavLink>
     </div>
-  );
-};
+  )
+}

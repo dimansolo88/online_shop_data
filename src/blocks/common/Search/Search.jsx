@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { Input, WrapperSearch } from "./style";
+import React, { useState } from 'react'
+import { WrapperSearch } from './style'
+import { Input } from '../../../pages/Contact/style'
 // import styles from '../../../pages/Contact/Contact.module.css'
 
 const Search = ({ setSearchFilter }) => {
-  const [filterValue, setFilterValue] = useState("");
+  const [filterValue, setFilterValue] = useState('')
 
   const onFilterHandler = e => {
-    setFilterValue(e.currentTarget.value.toLowerCase());
-    setSearchFilter(filterValue);
-  };
+    setFilterValue(e.currentTarget.value.toLowerCase())
+    setSearchFilter(filterValue)
+  }
 
   return (
     <WrapperSearch>
       <Input
-        // className={styles.input}
+        primary
         type="text"
         placeholder="entry a name of products"
         value={filterValue}
-        onChange={onFilterHandler}
-      />
+        onChange={onFilterHandler} />
     </WrapperSearch>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

@@ -1,14 +1,14 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const theme1 = {
-  primary: "#FFFFFF",
-  secondary: "#a9a9a9"
-};
+  primary: '#FFFFFF',
+  secondary: '#a9a9a9',
+}
 
 export const theme2 = {
-  primary: "#252527",
-  secondary: "#1f1f20"
-};
+  primary: '#252527',
+  secondary: '#1f1f20',
+}
 
 export const GlobalStyle = createGlobalStyle`
 html,
@@ -34,4 +34,4 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 
-`;
+`

@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
 
-  /*background-color: gray;*/
+
 }
 
 .intro span:nth-child(1) {
@@ -50,11 +50,7 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
 
-  /*font-weight: 700;*/
-  /*font-stretch: normal;*/
-  /*font-size: 50px;*/
-  /*line-height: 1.2;*/
-  /*letter-spacing: 5px;*/
+
 }
 
 .photo {
@@ -107,17 +103,6 @@
     width: 270px;
   }
 
-  /*.img:before {*/
-  /*    content: "";*/
-  /*    position: absolute;*/
-  /*    width: 300px;*/
-  /*    height: 400px;*/
-  /*    border: 5px solid #ea548d;*/
-  /*    left: 15px;*/
-  /*    top: -12px;*/
-  /*    z-index: -1;*/
-
-  /*}*/
 
   .intro span:nth-child(2) span:after {
     content: "";

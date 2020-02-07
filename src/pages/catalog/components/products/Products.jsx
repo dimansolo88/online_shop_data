@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import ProductCard from "./ProductCard/productcard";
-import styles from "../catalog.module.css";
+import React, { useEffect } from 'react'
+import ProductCard from './ProductCard/productcard'
+import styles from '../catalog.module.css'
 
 const Products = ({ products, getProduct }) => {
   useEffect(() => {
-    getProduct();
-  }, []);
-  console.log("1");
+    getProduct()
+  }, [])
+  console.log('1')
 
   return (
     <div className={styles.projectWraper}>
@@ -17,11 +17,10 @@ const Products = ({ products, getProduct }) => {
           title={p.title}
           size={p.size}
           price={p.price}
-          images={p.images}
-        />
+          images={p.images} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const WrapperSearch = styled.div`
   padding: 20px;
-`;
+`
 
 export const Input = styled.input`
   width: 50em;
@@ -15,4 +15,4 @@ export const Input = styled.input`
   color: white;
   outline: none;
   transition: all 0.5s ease-in-out;
-`;
+`

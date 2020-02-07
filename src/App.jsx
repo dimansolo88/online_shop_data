@@ -1,19 +1,13 @@
-import React from "react";
-import "./App.css";
-import Router from "./Router";
-import { ThemeProvider } from "styled-components";
-import ThemeWrapper from "./ThemeWrapper";
+import React from 'react'
+import './App.css'
+import Router from './Router'
+// import ThemeWrapper from './ThemeWrapper'
+import Layout from './Layout'
 
-const red = {
-  prinary: "red"
-};
-
-function App() {
+function App () {
   return (
-    <ThemeWrapper>
-      <Router />
-    </ThemeWrapper>
-  );
+    <Layout />
+  )
 }
 
-export default App;
+export default App
