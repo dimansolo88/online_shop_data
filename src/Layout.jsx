@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react'
 import { theme2, theme1 } from './theme/GlobalStyle'
 import ThemeWrapper from './ThemeWrapper'
 import Router from './Router'
+import propTypes from 'prop-types'
 
 export const ThemeContext = createContext({})
 
@@ -15,13 +16,16 @@ const Layout = ({ children }) => {
   return (
     <ThemeContext.Provider value={{ theme, handlerTheme }}>
       <div>
-        {children}
         <ThemeWrapper>
           <Router />
         </ThemeWrapper>
       </div>
     </ThemeContext.Provider>
   )
+}
+
+Layout.propTypes = {
+  children: propTypes.element,
 }
 
 export default Layout

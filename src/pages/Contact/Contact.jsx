@@ -27,20 +27,17 @@ const Contact = () => {
               type="text"
               name="name"
               className={styles.input}
-              placeholder="Your name"
-            />
+              placeholder="Your name" />
             <Input
               type="text"
               name="_replyto"
               className={styles.input}
-              placeholder="Your e-mail"
-            />
+              placeholder="Your e-mail" />
             <Textarea
               name="name"
               cols="30"
               rows="10"
-              placeholder="your message"
-            />
+              placeholder="your message" />
             <Button type="submit" value="send">
               send
             </Button>

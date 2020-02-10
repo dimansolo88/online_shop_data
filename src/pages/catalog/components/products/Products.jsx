@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import ProductCard from './ProductCard/productcard'
 import styles from '../catalog.module.css'
+import { childrenPropType } from '../../../../types/commonTypes'
 
 const Products = ({ products, getProduct }) => {
   useEffect(() => {
@@ -17,11 +18,14 @@ const Products = ({ products, getProduct }) => {
           title={p.title}
           size={p.size}
           price={p.price}
-          images={p.images}
-        />
+          images={p.images} />
       ))}
     </div>
   )
+}
+
+Products.propTypes = {
+  products: childrenPropType,
 }
 
 export default Products

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { WrapperSearch } from './style'
 import { Input } from '../../../pages/Contact/style'
-// import styles from '../../../pages/Contact/Contact.module.css'
+import propTypes from 'prop-types'
 
 const Search = ({ setSearchFilter }) => {
   const [filterValue, setFilterValue] = useState('')
@@ -18,10 +18,13 @@ const Search = ({ setSearchFilter }) => {
         type="text"
         placeholder="entry a name of products"
         value={filterValue}
-        onChange={onFilterHandler}
-      />
+        onChange={onFilterHandler} />
     </WrapperSearch>
   )
+}
+
+Search.propTypes = {
+  setSearchFilter: propTypes.func,
 }
 
 export default Search

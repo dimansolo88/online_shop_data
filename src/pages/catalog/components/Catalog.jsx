@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './catalog.module.css'
 import Fade from 'react-reveal/Fade'
 import Products from './products/Products'
 import Search from '../../../blocks/common/Search/Search'
@@ -9,7 +8,7 @@ import { compose } from 'redux'
 import { withRouter } from 'react-router-dom'
 import { getProduct } from '../../../store/reducers/product'
 import { setSearchFilter, sort } from '../../../store/actions/products'
-import { Sort } from '../../../test'
+import { Sort } from './products/Sort'
 import { LineWrapper } from '../../../blocks/common/line/style'
 import {
   BlockTitle,
@@ -17,6 +16,8 @@ import {
   ContainerCatalog,
   HeaderTitle,
 } from './style'
+import PropTypes from 'prop-types'
+import { childrenPropType } from '../../../types/commonTypes'
 
 const Catalog = React.memo(
   ({ products, setSearchFilter, getProduct, sort }) => {
@@ -40,6 +41,13 @@ const Catalog = React.memo(
     )
   },
 )
+
+Catalog.propTypes = {
+  products: childrenPropType,
+  setSearchFilter: PropTypes.func,
+  getProduct: PropTypes.func,
+  sort: PropTypes.func,
+}
 
 const mapStateToProps = state => ({
   products: getProductsSelector(state),

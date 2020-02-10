@@ -4,7 +4,8 @@ import {
   OUR_FAVORITES,
   SORT_PRICE_DOWN,
   SORT_PRICE_UP,
-} from './pages/catalog/constanties/constanties'
+} from '../../constanties/constanties'
+import PropTypes from 'prop-types'
 
 export const Sort = ({ sort }) => {
   const { Option } = Select
@@ -19,4 +20,8 @@ export const Sort = ({ sort }) => {
       <Option value={SORT_PRICE_DOWN}>Price low to high</Option>
     </Select>
   )
+}
+
+Sort.propTypes = {
+  sort: PropTypes.func,
 }

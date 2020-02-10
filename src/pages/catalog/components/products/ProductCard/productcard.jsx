@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../../catalog.module.css'
 import Button from '../../../../../blocks/common/button/Button'
+import PropTypes from 'prop-types'
 
 const ProductCard = ({ images, title, size, price }) => {
   return (
@@ -16,6 +17,13 @@ const ProductCard = ({ images, title, size, price }) => {
       </div>
     </div>
   )
+}
+
+ProductCard.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string),
+  title: PropTypes.string,
+  size: PropTypes.arrayOf(PropTypes.string),
+  price: PropTypes.number,
 }
 
 export default ProductCard

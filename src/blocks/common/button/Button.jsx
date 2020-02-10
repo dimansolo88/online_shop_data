@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../../../pages/Contact/Contact.module.css'
 import { BaseButton } from './style'
+import PropTypes from 'prop-types'
 
 const Button = ({ type, value, children }) => {
   return (
@@ -12,4 +13,9 @@ const Button = ({ type, value, children }) => {
   )
 }
 
+Button.propTypes = {
+  type: PropTypes.string,
+  value: PropTypes.string,
+  children: PropTypes.string,
+}
 export default Button
