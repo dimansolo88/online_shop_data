@@ -17,8 +17,6 @@
 .intro span {
   display: flex;
   flex-direction: column;
-
-
 }
 
 .intro span:nth-child(1) {
@@ -37,7 +35,7 @@
 }
 
 .intro span:nth-child(2) span:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 435px;
   height: 20px;
@@ -47,10 +45,8 @@
 }
 
 .intro span:nth-child(3) {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-
-
 }
 
 .photo {
@@ -67,7 +63,7 @@
 }
 
 .img {
-  background-image: url("../../../assets/img/IMG_0016.jpg");
+  background-image: url('../../../assets/img/IMG_0016.jpg');
   background-size: cover;
   background-position: center;
   width: 300px;
@@ -75,7 +71,7 @@
 }
 
 .img:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 300px;
   height: 420px;
@@ -103,9 +99,8 @@
     width: 270px;
   }
 
-
   .intro span:nth-child(2) span:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 0;

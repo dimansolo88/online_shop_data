@@ -21,7 +21,7 @@ export const TitleWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   line-height: 1.2;
   letter-spacing: 5px;
   font-weight: 300;

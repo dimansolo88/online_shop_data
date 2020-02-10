@@ -11,7 +11,12 @@ import { getProduct } from '../../../store/reducers/product'
 import { setSearchFilter, sort } from '../../../store/actions/products'
 import { Sort } from '../../../test'
 import { LineWrapper } from '../../../blocks/common/line/style'
-import { BlockTitle, CatalogWrapper, ContainerCatalog, HeaderTitle } from './style'
+import {
+  BlockTitle,
+  CatalogWrapper,
+  ContainerCatalog,
+  HeaderTitle,
+} from './style'
 
 const Catalog = React.memo(
   ({ products, setSearchFilter, getProduct, sort }) => {

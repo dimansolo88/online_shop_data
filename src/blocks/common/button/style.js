@@ -12,7 +12,7 @@ export const BaseButton = styled.button`
   background-color: transparent;
   outline: none;
   text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
@@ -22,7 +22,7 @@ export const BaseButton = styled.button`
   padding: 8px 30px;
   z-index: 0;
   &: after {
-    content: "";
+    content: '';
     position: absolute;
     width: 50%;
     height: 8px;
@@ -32,29 +32,28 @@ export const BaseButton = styled.button`
     z-index: -1;
   }
   &:hover {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
   }
   &:hover::after {
-  border-radius: 10px;
+    border-radius: 10px;
 
-  bottom: 0;
-  width: 60%;
-  height: 100%;
-}
-
-@media screen and (max-width: 1100px) {
-  &:after {
-    width: 0;
-    height: 0;
-  }
-
-  &:hover::after {
-    border-radius: 0;
     bottom: 0;
-    width: 0;
-    height: 0;
+    width: 60%;
+    height: 100%;
   }
-}
 
+  @media screen and (max-width: 1100px) {
+    &:after {
+      width: 0;
+      height: 0;
+    }
+
+    &:hover::after {
+      border-radius: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+    }
+  }
 `

@@ -7,7 +7,6 @@ export const CatalogWrapper = styled.div`
   min-height: 100vh;
   background-color: ${props => props.theme.secondary};
   background-attachment: fixed;
-
 `
 
 export const ContainerCatalog = styled.div`
@@ -23,7 +22,7 @@ export const HeaderTitle = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   line-height: 1.2;
   letter-spacing: 5px;
   font-weight: 300;
@@ -36,7 +35,7 @@ export const BlockTitle = styled.h2`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   line-height: 1.2;
   letter-spacing: 5px;
   font-weight: 300;

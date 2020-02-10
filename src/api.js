@@ -6,7 +6,7 @@ const instance = axios.create({
 })
 
 export const api = {
-  async getProducts () {
+  async getProducts() {
     try {
       const res = await instance.get('/products?_start=20&_end=30')
       return res
@@ -14,5 +14,4 @@ export const api = {
       // console.log(e)
     }
   },
-
 }

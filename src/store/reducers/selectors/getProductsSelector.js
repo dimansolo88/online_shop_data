@@ -14,7 +14,5 @@ export const getProductsSelector = state => {
     }
   }
 
-  return products.filter(
-    p => p.title.toLowerCase().indexOf(searchValue) !== -1,
-  )
+  return products.filter(p => p.title.toLowerCase().indexOf(searchValue) !== -1)
 }

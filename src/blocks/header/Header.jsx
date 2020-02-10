@@ -19,9 +19,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <div className={styles.navMobile}>
-        <MenuToggle
-          handleonToogle={toogleMenu}
-          isOpen={menu} />
+        <MenuToggle handleonToogle={toogleMenu} isOpen={menu} />
       </div>
 
       <nav className={styles.nav}>
@@ -32,7 +30,11 @@ const Header = () => {
             <NavLink to="/contact"> Contact </NavLink>
           </div>
         </Roll>
-        <Select defaultValue="changeTheme" style={{ width: 200 }} onChange={handlerTheme}>
+        <Select
+          defaultValue="changeTheme"
+          style={{ width: 200 }}
+          onChange={handlerTheme}
+        >
           <Option value="light">light</Option>
           <Option value="dark">Dark</Option>
         </Select>

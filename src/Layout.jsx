@@ -21,7 +21,6 @@ const Layout = ({ children }) => {
         </ThemeWrapper>
       </div>
     </ThemeContext.Provider>
-
   )
 }
 
