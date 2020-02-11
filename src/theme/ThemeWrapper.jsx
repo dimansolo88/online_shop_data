@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { ThemeContext } from './Layout'
+import { ThemeContext } from '../Layout'
 import propTypes from 'prop-types'
 
 const ThemeWrapper = ({ children }) => {

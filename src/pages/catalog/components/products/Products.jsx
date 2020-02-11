@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import ProductCard from './ProductCard/productcard'
-import styles from '../catalog.module.css'
 import { childrenPropType } from '../../../../types/commonTypes'
+import PropTypes from 'prop-types'
+import { ProductsWrapper } from './style'
 
 const Products = ({ products, getProduct }) => {
   useEffect(() => {
     getProduct()
   }, [])
-  console.log('1')
 
   return (
-    <div className={styles.projectWraper}>
+    <ProductsWrapper>
       {products.map(p => (
         <ProductCard
           key={p.id}
@@ -18,14 +18,16 @@ const Products = ({ products, getProduct }) => {
           title={p.title}
           size={p.size}
           price={p.price}
-          images={p.images} />
+          images={p.images}
+        />
       ))}
-    </div>
+    </ProductsWrapper>
   )
 }
 
 Products.propTypes = {
   products: childrenPropType,
+  getProduct: PropTypes.func,
 }
 
 export default Products

@@ -3,7 +3,7 @@ import './App.css'
 // import ThemeWrapper from './ThemeWrapper'
 import Layout from './Layout'
 
-function App () {
+function App() {
   return <Layout />
 }
 

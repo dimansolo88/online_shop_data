@@ -1,20 +1,25 @@
 import React from 'react'
-import styles from '../../catalog.module.css'
 import Button from '../../../../../blocks/common/button/Button'
 import PropTypes from 'prop-types'
+import {
+  ProductCardCommon,
+  ProductCardImg,
+  ProductCardTitle,
+  ProductCardWrapper,
+} from './style'
 
 const ProductCard = ({ images, title, size, price }) => {
   return (
     <div>
-      <div className={styles.project}>
-        <div className={styles.projectImg}>
+      <ProductCardWrapper>
+        <ProductCardImg>
           <img src={images[0]} alt="images" />
-        </div>
-        <span className={styles.projectTitle}> {title} </span>
-        <span className={styles.projectDiscription}> {size} </span>
-        <span className={styles.projectDiscription}> $ {price} </span>
+        </ProductCardImg>
+        <ProductCardTitle> {title} </ProductCardTitle>
+        <ProductCardCommon> {size.join(' ')} </ProductCardCommon>
+        <ProductCardCommon> $ {price} </ProductCardCommon>
         <Button> more </Button>
-      </div>
+      </ProductCardWrapper>
     </div>
   )
 }

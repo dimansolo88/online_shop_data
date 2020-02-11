@@ -8,7 +8,7 @@ import { compose } from 'redux'
 import { withRouter } from 'react-router-dom'
 import { getProduct } from '../../../store/reducers/product'
 import { setSearchFilter, sort } from '../../../store/actions/products'
-import { Sort } from './products/Sort'
+import { Sort } from './products/sort/Sort'
 import { LineWrapper } from '../../../blocks/common/line/style'
 import {
   BlockTitle,

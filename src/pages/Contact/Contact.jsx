@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './Contact.module.css'
 import Fade from 'react-reveal/Fade'
 import Button from '../../blocks/common/button/Button'
 import { LineWrapper } from '../../blocks/common/line/style'
@@ -23,21 +22,14 @@ const Contact = () => {
             action="https://formspree.io/dzmitry795@gmail.com"
             method="POST"
           >
-            <Input
-              type="text"
-              name="name"
-              className={styles.input}
-              placeholder="Your name" />
-            <Input
-              type="text"
-              name="_replyto"
-              className={styles.input}
-              placeholder="Your e-mail" />
+            <Input type="text" name="name" placeholder="Your name" />
+            <Input type="text" name="_replyto" placeholder="Your e-mail" />
             <Textarea
               name="name"
               cols="30"
               rows="10"
-              placeholder="your message" />
+              placeholder="your message"
+            />
             <Button type="submit" value="send">
               send
             </Button>

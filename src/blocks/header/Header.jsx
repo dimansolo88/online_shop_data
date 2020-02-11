@@ -1,11 +1,10 @@
 import React, { useContext, useState } from 'react'
 import styles from './Header.module.css'
-import Roll from 'react-reveal/Roll'
-import { NavLink } from 'react-router-dom'
 import MenuToggle from '../common/menuToogle/MenuToogle'
 import { HeaderWrapper } from './style'
 import { Select } from 'antd'
 import { ThemeContext } from '../../Layout'
+import { Menu } from './Menu'
 
 const Header = () => {
   const { handlerTheme } = useContext(ThemeContext)
@@ -23,13 +22,10 @@ const Header = () => {
       </div>
 
       <nav className={styles.nav}>
-        <Roll left>
-          <div className={styles.hiddenShiowMenoDesctop}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/catalog"> catalog </NavLink>
-            <NavLink to="/contact"> Contact </NavLink>
-          </div>
-        </Roll>
+        <div className={styles.hiddenShiowMenoDesctop}>
+          <Menu />
+        </div>
+
         <Select
           defaultValue="changeTheme"
           style={{ width: 200 }}
@@ -40,15 +36,12 @@ const Header = () => {
         </Select>
       </nav>
 
+      {/* mobile menu */}
       <div className={styles.wpapperMenu}>
         {menu && (
           <nav className={styles.navMobile}>
             <div className={styles.hiddenShiowMenuMobile}>
-              <Roll left>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/catalog">Catalog</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
-              </Roll>
+              <Menu />
             </div>
           </nav>
         )}

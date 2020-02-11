@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { theme2, theme1 } from './theme/GlobalStyle'
-import ThemeWrapper from './ThemeWrapper'
+import ThemeWrapper from './theme/ThemeWrapper'
 import Router from './Router'
 import propTypes from 'prop-types'
 

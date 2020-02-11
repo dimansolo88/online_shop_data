@@ -4,7 +4,7 @@ import {
   OUR_FAVORITES,
   SORT_PRICE_DOWN,
   SORT_PRICE_UP,
-} from '../../constanties/constanties'
+} from '../../../constanties/constanties'
 import PropTypes from 'prop-types'
 
 export const Sort = ({ sort }) => {
