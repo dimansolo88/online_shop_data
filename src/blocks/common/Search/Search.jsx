@@ -15,12 +15,12 @@ const Search = ({ setSearchFilter }) => {
     <WrapperSearch>
       <Input
         primary
-        type="text"
         placeholder="entry a name of products"
         value={filterValue}
-        onChange={onFilterHandler}
-      />
+        type="search"
+        onChange={onFilterHandler} />
     </WrapperSearch>
+
   )
 }
 

@@ -1,51 +1,51 @@
 import React, { useContext, useState } from 'react'
 import styles from './Header.module.css'
 import MenuToggle from '../common/menuToogle/MenuToogle'
-import { HeaderWrapper } from './style'
+import { HeaderWrapper, HiddenShowMenuDesktop, Nav, NavMobile, WrapperMenu } from './style'
 import { Select } from 'antd'
 import { ThemeContext } from '../../Layout'
-import { Menu } from './Menu'
+import { Menu } from './menu/Menu'
 
 const Header = () => {
   const { handlerTheme } = useContext(ThemeContext)
   const [menu, setMenu] = useState(false)
   const { Option } = Select
 
-  const toogleMenu = () => {
+  const toggleMenu = () => {
     setMenu(!menu)
   }
 
   return (
     <HeaderWrapper>
-      <div className={styles.navMobile}>
-        <MenuToggle handleonToogle={toogleMenu} isOpen={menu} />
-      </div>
+      <NavMobile>
+        <MenuToggle toggleMenu={toggleMenu} isOpen={menu} />
+      </NavMobile>
 
-      <nav className={styles.nav}>
-        <div className={styles.hiddenShiowMenoDesctop}>
+      <Nav>
+        <HiddenShowMenuDesktop>
           <Menu />
-        </div>
+        </HiddenShowMenuDesktop>
 
         <Select
-          defaultValue="changeTheme"
+          defaultValue="dark"
           style={{ width: 200 }}
           onChange={handlerTheme}
         >
           <Option value="light">light</Option>
           <Option value="dark">Dark</Option>
         </Select>
-      </nav>
+      </Nav>
 
       {/* mobile menu */}
-      <div className={styles.wpapperMenu}>
+      <WrapperMenu>
         {menu && (
           <nav className={styles.navMobile}>
             <div className={styles.hiddenShiowMenuMobile}>
-              <Menu />
+              <Menu hideMenu={toggleMenu} />
             </div>
           </nav>
         )}
-      </div>
+      </WrapperMenu>
     </HeaderWrapper>
   )
 }

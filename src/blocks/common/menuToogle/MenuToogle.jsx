@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Bar, MenuButton } from './style'
 
-const MenuToggle = ({ isOpen, handleonToogle }) => {
+const MenuToggle = ({ isOpen, toggleMenu }) => {
   return (
     <div>
       <MenuButton
         className={isOpen && 'active'}
         aria-label="open menu"
-        onClick={handleonToogle}
+        onClick={toggleMenu}
       >
         <Bar />
         <Bar />
@@ -20,7 +20,7 @@ const MenuToggle = ({ isOpen, handleonToogle }) => {
 
 MenuToggle.propTypes = {
   isOpen: PropTypes.bool,
-  handleonToogle: PropTypes.func,
+  toggleMenu: PropTypes.func,
 }
 
 export default MenuToggle

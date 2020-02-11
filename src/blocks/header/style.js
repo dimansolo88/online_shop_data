@@ -10,6 +10,7 @@ export const HeaderWrapper = styled.header`
   z-index: 99;
   opacity: 0.7;
   @media screen and (max-width: 1100px) {
+    width: 50%;
     justify-content: end;
     opacity: 10;
     background-color: transparent;
@@ -22,6 +23,7 @@ export const NavMobile = styled.div`
   background-color: gray;
   @media screen and (min-width: 1100px) {
     display: none !important;
+    width: 0;
   }
 `
 
@@ -37,4 +39,20 @@ export const Nav = styled.nav`
 }
 @media screen and (max-width: 1100px) {
     display: none !important;
+    }
+`
+export const HiddenShowMenuDesktop = styled.div`
+  display: flex;
+  margin-right: 40px;
+  justify-content: space-between;
+  width: 400px;
+
+`
+
+export const WrapperMenu = styled.div`
+@media screen and (max-width: 1100px) {
+    width: 45%;
+    min-height: 100vh;
+   
+
 `

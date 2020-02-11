@@ -22,14 +22,13 @@ const Contact = () => {
             action="https://formspree.io/dzmitry795@gmail.com"
             method="POST"
           >
-            <Input type="text" name="name" placeholder="Your name" />
-            <Input type="text" name="_replyto" placeholder="Your e-mail" />
+            <Input name="name" placeholder="Your name" />
+            <Input name="_replyto" placeholder="Your e-mail" />
             <Textarea
               name="name"
               cols="30"
               rows="10"
-              placeholder="your message"
-            />
+              placeholder="your message" />
             <Button type="submit" value="send">
               send
             </Button>
