@@ -8,9 +8,9 @@ export const Menu = ({ hideMenu }) => {
   return (
     <Roll left>
       {/*<NavLink to="/" onClick={hideMenu}>Home</NavLink>*/}
-      <NavLink to="/" onClick={hideMenu}>Home</NavLink>
-      <NavLink to="/catalog" onClick={hideMenu}>Catalog</NavLink>
-      <NavLink to="/contact" onClick={hideMenu}>Contact</NavLink>
+      <StyleNavLink to="/" onClick={hideMenu}>Home</StyleNavLink>
+      <StyleNavLink to="/catalog" onClick={hideMenu}>Catalog</StyleNavLink>
+      <StyleNavLink to="/contact" onClick={hideMenu}>Contact</StyleNavLink>
     </Roll>
   )
 }

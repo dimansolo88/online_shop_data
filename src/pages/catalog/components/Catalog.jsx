@@ -20,8 +20,8 @@ import { childrenPropType } from '../../../constants/propTypes '
 const Catalog = React.memo(
   ({ products, setSearchFilter, getProduct, sort }) => {
     return (
-      <CatalogWrapper>
-        <Fade big cascade>
+      <Fade big cascade>
+        <CatalogWrapper>
           <ContainerCatalog>
             <HeaderTitle>
               <BlockTitle> Catalog </BlockTitle>
@@ -34,8 +34,8 @@ const Catalog = React.memo(
               <Products products={products} getProduct={getProduct} />
             </div>
           </ContainerCatalog>
-        </Fade>
-      </CatalogWrapper>
+        </CatalogWrapper>
+      </Fade>
     )
   },
 )

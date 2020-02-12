@@ -6,6 +6,7 @@ import {
   SORT_PRICE_UP,
 } from '../../../../../constants/constants'
 import PropTypes from 'prop-types'
+import { StyledSelect } from './style'
 
 export const Sort = ({ sort }) => {
   const { Option } = Select
@@ -14,11 +15,11 @@ export const Sort = ({ sort }) => {
     sort(value)
   }
   return (
-    <Select defaultValue={OUR_FAVORITES} style={{ width: 300 }} onChange={handleChange}>
+    <StyledSelect defaultValue={OUR_FAVORITES} onChange={handleChange}>
       <Option value={OUR_FAVORITES}>Our favorites</Option>
       <Option value={SORT_PRICE_UP}>Price high to low</Option>
       <Option value={SORT_PRICE_DOWN}>Price low to high</Option>
-    </Select>
+    </StyledSelect>
   )
 }
 

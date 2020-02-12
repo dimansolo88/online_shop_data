@@ -1,13 +1,12 @@
 import React from 'react'
-import styles from '../style/main.module.css'
 import Fade from 'react-reveal/Fade'
-import { Intro, MainWrapper } from '../style/style'
+import { Container, Intro, MainWrapper } from '../style/style'
 
 const Main = () => {
   return (
     <MainWrapper>
-      <Fade big cascade>
-        <div className={styles.container}>
+      <Container>
+        <Fade big cascade>
           <Intro>
             <span>Hi</span>
             <span>
@@ -18,10 +17,9 @@ const Main = () => {
               <h1> we are best of the best </h1>
             </span>
           </Intro>
-
           {/* <div className={styles.photo} /> */}
-        </div>
-      </Fade>
+        </Fade>
+      </Container>
     </MainWrapper>
   )
 }
