@@ -5,9 +5,7 @@ import Search from '../../../blocks/common/Search/Search'
 import { connect } from 'react-redux'
 import { getProductsSelector } from '../../../store/reducers/selectors/getProductsSelector'
 import { compose } from 'redux'
-import { withRouter } from 'react-router-dom'
-import { getProduct } from '../../../store/reducers/product'
-import { setSearchFilter, sort } from '../../../store/actions/products'
+import { getProduct, setSearchFilter, sort } from '../../../store/actions/products'
 import { Sort } from './products/sort/Sort'
 import { LineWrapper } from '../../../blocks/common/line/style'
 import {
@@ -17,7 +15,7 @@ import {
   HeaderTitle,
 } from './style'
 import PropTypes from 'prop-types'
-import { childrenPropType } from '../../../types/commonTypes'
+import { childrenPropType } from '../../../constants/propTypes '
 
 const Catalog = React.memo(
   ({ products, setSearchFilter, getProduct, sort }) => {
@@ -53,7 +51,6 @@ const mapStateToProps = state => ({
   products: getProductsSelector(state),
 })
 export default compose(
-  withRouter,
   connect(mapStateToProps, {
     getProduct,
     setSearchFilter,

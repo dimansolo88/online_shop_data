@@ -1,4 +1,6 @@
 // ACTIONS
+import { api } from '../../api/api'
+
 export const SET_PRODUCTS_SUCCESS = 'ONLINE_SHOP/PRODUCTS/SET_PRODUCTS_SUCCESS'
 export const SET_SEARCH_FILTER_VALUE =
   'ONLINE_SHOP/PRODUCTS/SET_SEARCH_FILTER_VALUE'
@@ -20,3 +22,13 @@ export const sort = value => ({
   type: SORT_PRODUCTS,
   payload: value,
 })
+
+
+export const getProduct = () => async dispatch => {
+  try {
+    const res = await api.getProducts()
+    dispatch(setProductsSuccess(res.data))
+  } catch (e) {
+    // console.log(e)
+  }
+}

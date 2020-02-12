@@ -4,7 +4,7 @@ import {
   SORT_PRODUCTS,
   SET_PRODUCTS_SUCCESS,
 } from '../actions/products'
-import { api } from '../../api'
+import { api } from '../../api/api'
 
 const initiateState = {
   product: [],
@@ -35,11 +35,3 @@ export const product = (state = initiateState, action) => {
   }
 }
 
-export const getProduct = () => async dispatch => {
-  try {
-    const res = await api.getProducts()
-    dispatch(setProductsSuccess(res.data))
-  } catch (e) {
-    // console.log(e)
-  }
-}

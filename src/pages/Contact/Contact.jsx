@@ -29,9 +29,7 @@ const Contact = () => {
               cols="30"
               rows="10"
               placeholder="your message" />
-            <Button type="submit" value="send">
-              send
-            </Button>
+            <Button type="submit" value="send" />
           </FormWrapper>
         </Fade>
       </Container>

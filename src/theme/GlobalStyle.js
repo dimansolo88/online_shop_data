@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 html,
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-stretch: normal;

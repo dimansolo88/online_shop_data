@@ -8,7 +8,7 @@ export const Menu = ({ hideMenu }) => {
   return (
     <Roll left>
       {/*<NavLink to="/" onClick={hideMenu}>Home</NavLink>*/}
-      <StyleNavLink to="/" onClick={hideMenu}>Home</StyleNavLink>
+      <NavLink to="/" onClick={hideMenu}>Home</NavLink>
       <NavLink to="/catalog" onClick={hideMenu}>Catalog</NavLink>
       <NavLink to="/contact" onClick={hideMenu}>Contact</NavLink>
     </Roll>

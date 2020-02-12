@@ -18,7 +18,7 @@ const ProductCard = ({ images, title, size, price }) => {
         <ProductCardTitle> {title} </ProductCardTitle>
         <ProductCardCommon> {size.join(' ')} </ProductCardCommon>
         <ProductCardCommon> $ {price} </ProductCardCommon>
-        <Button> more </Button>
+        <Button value="more" />
       </ProductCardWrapper>
     </div>
   )

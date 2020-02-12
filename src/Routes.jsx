@@ -6,6 +6,7 @@ import Main from './pages/main/components/Main'
 import Catalog from './pages/catalog/components/Catalog'
 import Contact from './pages/Contact/Contact'
 import Footer from './blocks/footer/Footer'
+import NotFount from './pages/catalog/components/notFound/NotFound'
 
 export default () => {
   const particle = {
@@ -24,9 +25,10 @@ export default () => {
       <Particles className="partikless" params={particle} />
       <Header />
       <Switch>
-        <Route path="/" exact render={() => <Main />} />
-        <Route path="/catalog/:id?" render={() => <Catalog />} />
-        <Route path="/contact" render={() => <Contact />} />
+        <Route path="/" exact component={Main} />
+        <Route path="/catalog/:id?" component={Catalog} />
+        <Route path="/contact" component={Contact} />
+        <Route path="*" component={NotFount} />
       </Switch>
       <Footer />
     </BrowserRouter>

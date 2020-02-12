@@ -4,7 +4,7 @@ import {
   OUR_FAVORITES,
   SORT_PRICE_DOWN,
   SORT_PRICE_UP,
-} from '../../../constanties/constanties'
+} from '../../../../../constants/constants'
 import PropTypes from 'prop-types'
 
 export const Sort = ({ sort }) => {
@@ -14,7 +14,7 @@ export const Sort = ({ sort }) => {
     sort(value)
   }
   return (
-    <Select defaultValue="Sort" style={{ width: 300 }} onChange={handleChange}>
+    <Select defaultValue={OUR_FAVORITES} style={{ width: 300 }} onChange={handleChange}>
       <Option value={OUR_FAVORITES}>Our favorites</Option>
       <Option value={SORT_PRICE_UP}>Price high to low</Option>
       <Option value={SORT_PRICE_DOWN}>Price low to high</Option>

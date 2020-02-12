@@ -6,7 +6,7 @@ const Button = ({ type, value, children }) => {
   return (
     <>
       <BaseButton type={type} value={value}>
-        {children}
+        {value}
       </BaseButton>
     </>
   )

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import ProductCard from './ProductCard/productcard'
-import { childrenPropType } from '../../../../types/commonTypes'
 import PropTypes from 'prop-types'
 import { ProductsWrapper } from './style'
+import { childrenPropType } from '../../../../constants/propTypes '
 
 const Products = ({ products, getProduct }) => {
   useEffect(() => {
