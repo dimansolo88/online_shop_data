@@ -1,10 +1,8 @@
 import {
-  setProductsSuccess,
   SET_SEARCH_FILTER_VALUE,
   SORT_PRODUCTS,
   SET_PRODUCTS_SUCCESS,
 } from '../actions/products'
-import { api } from '../../api/api'
 
 const initiateState = {
   product: [],
@@ -34,4 +32,3 @@ export const product = (state = initiateState, action) => {
       return state
   }
 }
-

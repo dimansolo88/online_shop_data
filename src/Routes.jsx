@@ -2,11 +2,11 @@ import React from 'react'
 import Header from './blocks/header/Header'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Main from './pages/main/components/Main'
-import Catalog from './pages/catalog/components/Catalog'
 import Contact from './pages/Contact/Contact'
 import Footer from './blocks/footer/Footer'
 import NotFount from './pages/catalog/components/notFound/NotFound'
 import { StyledParticles } from './particlesStyles'
+import { Catalog } from './pages/catalog/components/catalog'
 
 export default () => {
   const particle = {

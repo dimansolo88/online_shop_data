@@ -2,10 +2,6 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import Products from '../products/Products'
 import Search from '../../../../blocks/common/Search/Search'
-import { connect } from 'react-redux'
-import { getProductsSelector } from '../../../../store/reducers/selectors/getProductsSelector'
-import { compose } from 'redux'
-import { getProduct, setSearchFilter, sort } from '../../../../store/actions/products'
 import { Sort } from '../products/sort/Sort'
 import { LineWrapper } from '../../../../blocks/common/line/style'
 import {
@@ -39,6 +35,7 @@ const Catalog = React.memo(
     )
   },
 )
+export default Catalog
 
 Catalog.propTypes = {
   products: childrenPropType,
@@ -47,13 +44,13 @@ Catalog.propTypes = {
   sort: PropTypes.func,
 }
 
-const mapStateToProps = state => ({
-  products: getProductsSelector(state),
-})
-export default compose(
-  connect(mapStateToProps, {
-    getProduct,
-    setSearchFilter,
-    sort,
-  }),
-)(Catalog)
+// const mapStateToProps = state => ({
+//   products: getProductsSelector(state),
+// })
+// export default compose(
+//   connect(mapStateToProps, {
+//     getProduct,
+//     setSearchFilter,
+//     sort,
+//   }),
+// )(Catalog)
