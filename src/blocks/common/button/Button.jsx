@@ -2,7 +2,7 @@ import React from 'react'
 import { BaseButton } from './style'
 import PropTypes from 'prop-types'
 
-const Button = ({ type, value, children }) => {
+const Button = ({ type, value }) => {
   return (
     <>
       <BaseButton type={type} value={value}>

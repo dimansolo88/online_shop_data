@@ -23,7 +23,6 @@ export const sort = value => ({
   payload: value,
 })
 
-
 export const getProduct = () => async dispatch => {
   try {
     const res = await api.getProducts()

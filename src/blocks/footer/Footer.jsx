@@ -13,7 +13,7 @@ import {
   SocialIconLink,
   TitleWrapper,
 } from './style'
-import { LineWrapper } from '../common/line/style'
+import { LineWrapper } from '../../blocks'
 
 const Footer = () => {
   const state = [

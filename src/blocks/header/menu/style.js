@@ -8,5 +8,4 @@ export const StyleNavLink = styled(NavLink)`
     font-weight: bold;
     border-bottom: 2px black solid;
   }
-
 `

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Particles from 'react-particles-js'
 
-
 export const StyledParticles = styled(Particles)`
   position: fixed;
   top: 0;

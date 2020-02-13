@@ -3,5 +3,4 @@ import { Select } from 'antd'
 
 export const StyledSelect = styled(Select)`
   width: 300px;
-
 `

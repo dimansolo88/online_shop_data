@@ -18,8 +18,7 @@ const Products = ({ products, getProduct }) => {
           title={p.title}
           size={p.size}
           price={p.price}
-          images={p.images}
-        />
+          images={p.images} />
       ))}
     </ProductsWrapper>
   )

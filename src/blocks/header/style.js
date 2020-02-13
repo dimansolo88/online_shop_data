@@ -34,19 +34,18 @@ export const Nav = styled.nav`
   align-items: center;
   width: 100%;
   a {
-  text-decoration: none;
-  color: #1f1f20;
-}
-@media screen and (max-width: 1100px) {
+    text-decoration: none;
+    color: #1f1f20;
+  }
+  @media screen and (max-width: 1100px) {
     display: none !important;
-    }
+  }
 `
 export const HiddenShowMenuDesktop = styled.div`
   display: flex;
   margin-right: 40px;
   justify-content: space-between;
   width: 400px;
-
 `
 
 export const WrapperMenu = styled.div`

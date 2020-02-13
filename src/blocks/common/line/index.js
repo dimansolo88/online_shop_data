@@ -1,0 +1,1 @@
+export { LineWrapper } from './style'

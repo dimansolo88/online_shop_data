@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Result, Button } from 'antd'
 
-
 export const NonFoundWrapper = styled.div`
   position: relative;
   display: flex;
@@ -12,7 +11,6 @@ export const NonFoundWrapper = styled.div`
 
 export const StyledResult = styled(Result)`
   padding: 150px;
-
 `
 
 export const StyledButton = styled(Button)`
@@ -20,14 +18,13 @@ export const StyledButton = styled(Button)`
   border: none;
   color: #1f1f20;
   &:hover {
-  background-color: #ea548d;
+    background-color: #ea548d;
   }
   &:active {
-  background-color: white;
+    background-color: white;
   }
   &:focus {
-  background-color: white;
-  color:black;
+    background-color: white;
+    color: black;
   }
-
 `

@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import Products from '../products/Products'
-import Search from '../../../../blocks/common/Search/Search'
+import { Search } from '../../../../blocks'
 import { Sort } from '../products/sort/Sort'
 import { LineWrapper } from '../../../../blocks/common/line/style'
 import {

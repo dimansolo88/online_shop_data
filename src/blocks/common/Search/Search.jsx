@@ -20,7 +20,6 @@ const Search = ({ setSearchFilter }) => {
         type="search"
         onChange={onFilterHandler} />
     </WrapperSearch>
-
   )
 }
 

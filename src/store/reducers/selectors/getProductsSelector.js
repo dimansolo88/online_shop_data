@@ -1,7 +1,4 @@
-import {
-  SORT_PRICE_DOWN,
-  SORT_PRICE_UP,
-} from '../../../constants/constants'
+import { SORT_PRICE_DOWN, SORT_PRICE_UP } from '../../../constants/constants'
 
 export const getProductsSelector = state => {
   const products = [...state.product.product]
