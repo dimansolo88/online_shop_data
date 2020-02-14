@@ -1,5 +1,6 @@
 import React from 'react'
-import Button from '../../../../../blocks/common/button/Button'
+import { Button } from '@/blocks'
+import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {
   ProductCardCommon,
@@ -8,7 +9,7 @@ import {
   ProductCardWrapper,
 } from './style'
 
-const ProductCard = ({ images, title, size, price }) => {
+const ProductCard = ({ id, images, title, size, price }) => {
   return (
     <div>
       <ProductCardWrapper>
@@ -18,7 +19,9 @@ const ProductCard = ({ images, title, size, price }) => {
         <ProductCardTitle> {title} </ProductCardTitle>
         <ProductCardCommon> {size.join(' ')} </ProductCardCommon>
         <ProductCardCommon> $ {price} </ProductCardCommon>
-        <Button value="more" />
+        <NavLink to={`/detail/${id}`}>
+          <Button value="more" />
+        </NavLink>
       </ProductCardWrapper>
     </div>
   )
@@ -28,6 +31,7 @@ ProductCard.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string,
   size: PropTypes.arrayOf(PropTypes.string),
+  id: PropTypes.string,
   price: PropTypes.number,
 }
 

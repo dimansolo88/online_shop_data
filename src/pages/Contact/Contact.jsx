@@ -1,6 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { LineWrapper, Button } from '../../blocks'
+import { LineWrapper, Button } from '@/blocks'
 import {
   ContactWrapper,
   Container,

@@ -1,10 +1,10 @@
 const path = require('path')
-module.exports = function (config, env) {
+module.exports = function (config) {
   config.resolve = {
     ...config.resolve,
     alias: {
       ...config.resolve.alias,
-      '@': path.relative(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),
     },
 
   }

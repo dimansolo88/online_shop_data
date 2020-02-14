@@ -1,5 +1,5 @@
 // ACTIONS
-import { api } from '../../api/api'
+import { getProductApi } from '@/api/getProductApi'
 
 export const SET_PRODUCTS_SUCCESS = 'ONLINE_SHOP/PRODUCTS/SET_PRODUCTS_SUCCESS'
 export const SET_SEARCH_FILTER_VALUE =
@@ -23,9 +23,11 @@ export const sort = value => ({
   payload: value,
 })
 
+// thunk
+
 export const getProduct = () => async dispatch => {
   try {
-    const res = await api.getProducts()
+    const res = await getProductApi.getProducts()
     dispatch(setProductsSuccess(res.data))
   } catch (e) {
     // console.log(e)

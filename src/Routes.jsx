@@ -2,7 +2,7 @@ import React from 'react'
 import { Header, Footer } from './blocks/'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { StyledParticles } from './particlesStyles'
-import { Catalog, NotFount, Main, Contact } from './pages'
+import { Catalog, NotFount, Main, Contact, DetailProduct } from './pages'
 
 export default () => {
   const particle = {
@@ -22,7 +22,8 @@ export default () => {
       <Header />
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/catalog/:id?" component={Catalog} />
+        <Route path="/catalog/" component={Catalog} />
+        <Route path="/detail/:id" component={DetailProduct} />
         <Route path="/contact" component={Contact} />
         <Route path="*" component={NotFount} />
       </Switch>
