@@ -1,6 +1,5 @@
 import React from 'react'
-import { Spin, Alert } from 'antd';
-
+import { Spin, Alert } from 'antd'
 
 export const Loader = () => {
   return (
@@ -13,4 +12,3 @@ export const Loader = () => {
     </Spin>
   )
 }
-

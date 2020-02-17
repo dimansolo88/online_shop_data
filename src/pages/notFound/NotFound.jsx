@@ -8,7 +8,8 @@ const NotFount = () => {
         status="404"
         title="404"
         subTitle="Sorry, the page you visited does not exist."
-        extra={<StyledButton type="primary">Back Home</StyledButton>} />
+        extra={<StyledButton type="primary">Back Home</StyledButton>}
+      />
     </NonFoundWrapper>
   )
 }

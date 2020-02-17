@@ -10,7 +10,6 @@ const initiateState = {
   sortFilter: '',
   searchProductsOnName: '',
   currentProduct: null,
-
 }
 export const product = (state = initiateState, action) => {
   switch (action.type) {
@@ -31,7 +30,8 @@ export const product = (state = initiateState, action) => {
       }
     case SET_DETAILED_PRODUCT_SUCCESS:
       return {
-        ...state, currentProduct: action.payload,
+        ...state,
+        currentProduct: action.payload,
       }
 
     default:

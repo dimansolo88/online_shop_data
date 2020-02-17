@@ -1,50 +1,88 @@
 import React, { useEffect } from 'react'
 import Fade from 'react-reveal/Fade'
-import { StyleContainer, StyledCarusel, StyleDetail } from './style'
+import {
+  StyleContainer,
+  StyledColorSection,
+  StyledCurrentPrice,
+  StyleDetail,
+  StyledPriceSection,
+  StyledProductLayout,
+  StyledProductSection,
+  StyledSelectSizeSection,
+  StyledSizeSelect,
+} from './style'
 import PropTypes from 'prop-types'
-import { Loader } from '../../../blocks/'
+import {
+  Loader,
+  EmblaCarouselComponent,
+  LazyImage,
+  LazyImageProvider,
+} from '@/blocks'
+import { Select } from 'antd'
 
-const DetailProduct = ({ history, match, location, getCurrentProduct, currentProduct }) => {
-  const { id } = match.params
+const DetailProduct = React.memo(
+  ({ history, match, location, getCurrentProduct, currentProduct }) => {
+    const { id } = match.params
 
-  useEffect(() => {
-    getCurrentProduct(id)
-  }, [id])
+    useEffect(() => {
+      getCurrentProduct(id)
+    }, [id])
 
-  if (!currentProduct) {
-    return <Loader />
-  }
+    if (!currentProduct) {
+      return <Loader />
+    }
+    const { Option } = Select
+    return (
+      <Fade big cascade>
+        <StyleDetail>
+          <StyleContainer>
+            <StyledProductSection>
+              <LazyImageProvider>
+                <EmblaCarouselComponent>
+                  {currentProduct.images.map((image, i) => (
+                    <LazyImage aspectRatio={[10, 7]} src={image} key={i} />
+                  ))}
+                </EmblaCarouselComponent>
+              </LazyImageProvider>
+              <StyledProductLayout>
+                <h1> {currentProduct.title} </h1>
 
-  console.log(currentProduct.id)
-  function onChange (a, b, c) {
-    console.log(a, b, c)
-  }
-  return (
-    <Fade big cascade>
-      <StyleDetail>
-        <StyleContainer>
+                <StyledCurrentPrice>
+                  £ {currentProduct.price}
+                </StyledCurrentPrice>
 
-          {currentProduct.title}
-          {/*<Carousel afterChange={onChange}>*/}
-          {/*  <StyledCarusel>*/}
-          {/*    <h3>1</h3>*/}
-          {/*  </StyledCarusel>*/}
-          {/*  <div>*/}
-          {/*    <h3>2</h3>*/}
-          {/*  </div>*/}
-          {/*  <div>*/}
-          {/*    <h3>3</h3>*/}
-          {/*  </div>*/}
-          {/*  <div>*/}
-          {/*    <h3>4</h3>*/}
-          {/*  </div>*/}
-          {/*</Carousel>,*/}
-        </StyleContainer>
-      </StyleDetail>
-    </Fade>
-  )
-}
+                <StyledColorSection>
+                  <label>color:</label>
+                  <span> {currentProduct.color} </span>
+                </StyledColorSection>
+
+                <StyledPriceSection>
+                  <label>size:</label>
+
+                  <StyledSizeSelect>
+                    <StyledSelectSizeSection defaultValue="please select">
+                      {currentProduct.size.map(s => (
+                        <Option value={s} key={[s]}>
+                          {s}
+                        </Option>
+                      ))}
+                    </StyledSelectSizeSection>
+                  </StyledSizeSelect>
+                </StyledPriceSection>
+              </StyledProductLayout>
+            </StyledProductSection>
+
+            <div>
+              <div>{currentProduct.description}</div>
+            </div>
+          </StyleContainer>
+        </StyleDetail>
+      </Fade>
+    )
+  },
+)
 DetailProduct.propTypes = {
+  currentProduct: PropTypes.object,
   history: PropTypes.object,
   match: PropTypes.object,
   location: PropTypes.object,

@@ -18,7 +18,8 @@ const Search = ({ setSearchFilter }) => {
         placeholder="entry a name of products"
         value={filterValue}
         type="search"
-        onChange={onFilterHandler} />
+        onChange={onFilterHandler}
+      />
     </WrapperSearch>
   )
 }
