@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Fade from 'react-reveal/Fade'
 import {
   StyleContainer,
@@ -28,11 +28,10 @@ const DetailProduct = ({
   currentProduct,
 }) => {
   const { id } = match.params
-
+  console.log(currentProduct)
   useEffect(() => {
     getCurrentProduct(id)
   }, [id])
-  console.log(currentProduct)
 
   if (!currentProduct) {
     return <Loader />
@@ -46,7 +45,7 @@ const DetailProduct = ({
             <LazyImageProvider>
               <EmblaCarouselComponent>
                 {currentProduct.images.map((image, i) => (
-                  <LazyImage aspectRatio={[10, 7]} src={image} key={i} />
+                  <LazyImage aspectRatio={[10, 7]} src={image} key={image} />
                 ))}
               </EmblaCarouselComponent>
             </LazyImageProvider>
