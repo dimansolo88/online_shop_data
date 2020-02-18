@@ -31,7 +31,7 @@ export const product = (state = initiateState, action) => {
     case SET_DETAILED_PRODUCT_SUCCESS:
       return {
         ...state,
-        currentProduct: action.payload,
+        currentProduct: { ...action.payload },
       }
 
     default:

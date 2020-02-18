@@ -43,14 +43,3 @@ Catalog.propTypes = {
   getProduct: PropTypes.func,
   sort: PropTypes.func,
 }
-
-// const mapStateToProps = state => ({
-//   products: getProductsSelector(state),
-// })
-// export default compose(
-//   connect(mapStateToProps, {
-//     getProduct,
-//     setSearchFilter,
-//     sort,
-//   }),
-// )(Catalog)

@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import EmblaCarouselReact from 'embla-carousel-react'
-// import { PrevBtn, NextBtn, DotBtn } from './CarouselButtons'
 import './carusel.css'
 import { DotBtn, NextBtn, PrevBtn } from './CaruselButtons'
+import {
+  StyledCarousel,
+  StyledCarouselContainer,
+  StyledCarouselDots,
+  StyledCarouselItem,
+  StyledCarouselWrapper,
+} from './style'
 
 const EmblaCarouselComponent = ({ children }) => {
   const [carousel, initCarousel] = useState(null)
@@ -30,26 +36,24 @@ const EmblaCarouselComponent = ({ children }) => {
   }, [carousel])
 
   return (
-    <div className="carousel">
-      <div className="carousel__wrap">
+    <StyledCarousel>
+      <StyledCarouselWrapper>
         <EmblaCarouselReact
           className="carousel__viewport"
           emblaRef={initCarousel}
           options={{ loop: false }}
           htmlTagName="div"
         >
-          <div className="carousel__container">
+          <StyledCarouselContainer>
             {children.map((Child, index) => (
-              <div className="carousel__item" key={index}>
-                {Child}
-              </div>
+              <StyledCarouselItem key={index}>{Child}</StyledCarouselItem>
             ))}
-          </div>
+          </StyledCarouselContainer>
         </EmblaCarouselReact>
         <PrevBtn onClick={scrollPrev} enabled={prevBtnEnabled} />
         <NextBtn onClick={scrollNext} enabled={nextBtnEnabled} />
-      </div>
-      <div className="carousel__dots">
+      </StyledCarouselWrapper>
+      <StyledCarouselDots>
         {scrollSnaps.map((snap, index) => (
           <DotBtn
             selected={index === selectedIndex}
@@ -57,8 +61,8 @@ const EmblaCarouselComponent = ({ children }) => {
             key={index}
           />
         ))}
-      </div>
-    </div>
+      </StyledCarouselDots>
+    </StyledCarousel>
   )
 }
 

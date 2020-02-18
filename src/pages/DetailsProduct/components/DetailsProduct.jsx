@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Fade from 'react-reveal/Fade'
 import {
   StyleContainer,
@@ -20,67 +20,69 @@ import {
 } from '@/blocks'
 import { Select } from 'antd'
 
-const DetailProduct = React.memo(
-  ({ history, match, location, getCurrentProduct, currentProduct }) => {
-    const { id } = match.params
+const DetailProduct = ({
+  history,
+  match,
+  location,
+  getCurrentProduct,
+  currentProduct,
+}) => {
+  const { id } = match.params
 
-    useEffect(() => {
-      getCurrentProduct(id)
-    }, [id])
+  useEffect(() => {
+    getCurrentProduct(id)
+  }, [id])
+  console.log(currentProduct)
 
-    if (!currentProduct) {
-      return <Loader />
-    }
-    const { Option } = Select
-    return (
-      <Fade big cascade>
-        <StyleDetail>
-          <StyleContainer>
-            <StyledProductSection>
-              <LazyImageProvider>
-                <EmblaCarouselComponent>
-                  {currentProduct.images.map((image, i) => (
-                    <LazyImage aspectRatio={[10, 7]} src={image} key={i} />
-                  ))}
-                </EmblaCarouselComponent>
-              </LazyImageProvider>
-              <StyledProductLayout>
-                <h1> {currentProduct.title} </h1>
+  if (!currentProduct) {
+    return <Loader />
+  }
+  const { Option } = Select
+  return (
+    <Fade big cascade>
+      <StyleDetail>
+        <StyleContainer>
+          <StyledProductSection>
+            <LazyImageProvider>
+              <EmblaCarouselComponent>
+                {currentProduct.images.map((image, i) => (
+                  <LazyImage aspectRatio={[10, 7]} src={image} key={i} />
+                ))}
+              </EmblaCarouselComponent>
+            </LazyImageProvider>
+            <StyledProductLayout>
+              <h1> {currentProduct.title} </h1>
+              <StyledCurrentPrice>£ {currentProduct.price}</StyledCurrentPrice>
 
-                <StyledCurrentPrice>
-                  £ {currentProduct.price}
-                </StyledCurrentPrice>
+              <StyledColorSection>
+                <label>color:</label>
+                <span> {currentProduct.color} </span>
+              </StyledColorSection>
 
-                <StyledColorSection>
-                  <label>color:</label>
-                  <span> {currentProduct.color} </span>
-                </StyledColorSection>
+              <StyledPriceSection>
+                <label>size:</label>
 
-                <StyledPriceSection>
-                  <label>size:</label>
+                <StyledSizeSelect>
+                  <StyledSelectSizeSection defaultValue="please select">
+                    {currentProduct.size.map(s => (
+                      <Option value={s} key={[s]}>
+                        {s}
+                      </Option>
+                    ))}
+                  </StyledSelectSizeSection>
+                </StyledSizeSelect>
+              </StyledPriceSection>
+            </StyledProductLayout>
+          </StyledProductSection>
 
-                  <StyledSizeSelect>
-                    <StyledSelectSizeSection defaultValue="please select">
-                      {currentProduct.size.map(s => (
-                        <Option value={s} key={[s]}>
-                          {s}
-                        </Option>
-                      ))}
-                    </StyledSelectSizeSection>
-                  </StyledSizeSelect>
-                </StyledPriceSection>
-              </StyledProductLayout>
-            </StyledProductSection>
-
-            <div>
-              <div>{currentProduct.description}</div>
-            </div>
-          </StyleContainer>
-        </StyleDetail>
-      </Fade>
-    )
-  },
-)
+          <div>
+            <div>{currentProduct.description}</div>
+          </div>
+        </StyleContainer>
+      </StyleDetail>
+    </Fade>
+  )
+}
 DetailProduct.propTypes = {
   currentProduct: PropTypes.object,
   history: PropTypes.object,
