@@ -1,12 +1,11 @@
 import React from 'react'
 import { Button } from '@/blocks'
-import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {
   ProductCardCommon,
   ProductCardImg,
   ProductCardTitle,
-  ProductCardWrapper,
+  ProductCardWrapper, StyledNavLink,
 } from './style'
 
 const ProductCard = ({ id, images, title, size, price }) => {
@@ -17,11 +16,10 @@ const ProductCard = ({ id, images, title, size, price }) => {
           <img src={images[0]} alt="images" />
         </ProductCardImg>
         <ProductCardTitle> {title} </ProductCardTitle>
-        <ProductCardCommon> {size.join(' ')} </ProductCardCommon>
-        <ProductCardCommon> $ {price} </ProductCardCommon>
-        <NavLink to={`/detail/${id}`}>
+        <ProductCardCommon> £ {price} </ProductCardCommon>
+        <StyledNavLink to={`/detail/${id}`}>
           <Button value="more" />
-        </NavLink>
+        </StyledNavLink>
       </ProductCardWrapper>
     </div>
   )

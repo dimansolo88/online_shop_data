@@ -2,7 +2,7 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import Products from '../products/Products'
 import { Search } from '@/blocks'
-import { Sort } from '../products/sort/Sort'
+
 import { LineWrapper } from '@/blocks/common/line/style'
 import {
   BlockTitle,
@@ -12,6 +12,7 @@ import {
 } from './style'
 import PropTypes from 'prop-types'
 import { childrenPropType } from '../../../../constants/propTypes '
+import Sort from '../products/sort/container'
 
 const Catalog = React.memo(
   ({ products, setSearchFilter, getProduct, sort }) => {

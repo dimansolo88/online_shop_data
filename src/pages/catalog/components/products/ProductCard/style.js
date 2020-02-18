@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const ProductCardWrapper = styled.div`
   width: 500px;
@@ -42,4 +43,13 @@ export const ProductCardTitle = styled.span`
 `
 export const ProductCardCommon = styled.span`
   margin: 0 0 20px 20px;
+  font-weight: 900;
+  letter-spacing: 2px;;
+  white-space: nowrap;
+  font-size: 18px;
+`
+export const StyledNavLink = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+
 `

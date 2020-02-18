@@ -8,12 +8,13 @@ import {
 import PropTypes from 'prop-types'
 import { StyledSelect } from './style'
 
-export const Sort = ({ sort }) => {
+export const Sort = ({ sort, history, location }) => {
   const { Option } = Select
   const handleChange = value => {
-    console.log(`selected ${value}`)
+    console.log(value)
     sort(value)
   }
+
   return (
     <StyledSelect defaultValue={OUR_FAVORITES} onChange={handleChange}>
       <Option value={OUR_FAVORITES}>Our favorites</Option>
@@ -25,4 +26,6 @@ export const Sort = ({ sort }) => {
 
 Sort.propTypes = {
   sort: PropTypes.func,
+  history: PropTypes.object,
+  location: PropTypes.object,
 }
