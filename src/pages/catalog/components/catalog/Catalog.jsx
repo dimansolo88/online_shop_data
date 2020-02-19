@@ -15,7 +15,7 @@ import { childrenPropType } from '../../../../constants/propTypes '
 import Sort from '../products/sort/container'
 
 const Catalog = React.memo(
-  ({ products, setSearchFilter, getProduct, sort }) => {
+  ({ products, setSearchFilter, getProduct, sort, sortFilter }) => {
     return (
       <Fade big cascade>
         <CatalogWrapper>
@@ -24,7 +24,7 @@ const Catalog = React.memo(
               <BlockTitle> Catalog </BlockTitle>
               <Search setSearchFilter={setSearchFilter} />
               <LineWrapper />
-              <Sort sort={sort} />
+              <Sort sort={sort} sortFilter={sortFilter} />
             </HeaderTitle>
 
             <div>
@@ -43,4 +43,5 @@ Catalog.propTypes = {
   setSearchFilter: PropTypes.func,
   getProduct: PropTypes.func,
   sort: PropTypes.func,
+  sortFilter: PropTypes.string,
 }
