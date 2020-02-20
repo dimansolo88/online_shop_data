@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { WrapperSearch } from './style'
 // import { Input } from '@/pages/Contact/style'
 import PropTypes from 'prop-types'
