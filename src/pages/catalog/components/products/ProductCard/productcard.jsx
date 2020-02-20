@@ -5,7 +5,8 @@ import {
   ProductCardCommon,
   ProductCardImg,
   ProductCardTitle,
-  ProductCardWrapper, StyledNavLink,
+  ProductCardWrapper,
+  StyledNavLink,
 } from './style'
 
 const ProductCard = ({ id, images, title, size, price }) => {

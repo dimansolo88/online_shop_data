@@ -1,24 +1,30 @@
 import React, { useState } from 'react'
 import { WrapperSearch } from './style'
-import { Input } from '@/pages/Contact/style'
+// import { Input } from '@/pages/Contact/style'
 import PropTypes from 'prop-types'
+// import { Input } from 'antd'
+import { SearchInput } from './searrchInput/index'
+import _ from 'lodash'
 
 const Search = ({ setSearchFilter, history, match, location }) => {
   const [filterValue, setFilterValue] = useState('')
 
-  const onFilterHandler = e => {
-    setFilterValue(e.currentTarget.value.toLowerCase())
+  const onFilterHandler = _.debounce(value => {
+    setFilterValue(value)
     setSearchFilter(filterValue)
-  }
+  }, 1000)
+
   return (
     <WrapperSearch>
-      <Input
-        primary
-        placeholder="entry a name of products"
-        value={filterValue}
-        type="search"
-        onChange={onFilterHandler}
-      />
+      {/* <Input */}
+      {/*  primary */}
+      {/*  placeholder="entry a name of products" */}
+      {/*  value={filterValue} */}
+      {/*  type="search" */}
+      {/*  onChange={onFilterHandler} */}
+      {/* /> */}
+      {/* <Search placeholder="search for items" onSearch={value => console.log(value)} enterButton /> */}
+      <SearchInput onFilterHandler={onFilterHandler} />
     </WrapperSearch>
   )
 }
