@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Select } from 'antd'
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -53,5 +54,9 @@ export const WrapperMenu = styled.div`
     width: 45%;
     min-height: 100vh;
    
+`
+
+export const StyleSelect = styled(Select)`
+    width: 200px
 
 `
