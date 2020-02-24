@@ -1,6 +1,7 @@
 import React from 'react'
 import { BaseButton } from './style'
 import PropTypes from 'prop-types'
+// import Translate from '@/locale/tralsate'
 
 const Button = ({ type, value }) => {
   return (

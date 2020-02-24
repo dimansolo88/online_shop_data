@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { IntlProvider } from 'react-intl'
 import { LOCALES } from './constants'
-import { messages } from './messages/'
+import messages from './messages'
 
 const Provider = ({ children, locale = LOCALES.ENGLISH }) => {
   return (
@@ -20,7 +20,7 @@ Provider.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  locale: PropTypes.object,
+  locale: PropTypes.string,
 }
 
 export default Provider
