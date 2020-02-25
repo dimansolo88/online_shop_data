@@ -20,16 +20,14 @@ export const StyledButtonSearch = styled(Button)`
 
 export const StyledDrawer = styled(Drawer)``
 export const StyledSearch = styled(Search)`
-  & button {
-    background-color: transparent;
-    color: black
-    
-  }
-  
-  & button:hover {
-    background-color: darkgray;
-    color black
-  }
-
-  
+  //& button {
+  //  background-color: red;
+  //  color: black
+  //
+  //}
+  //
+  //& button:hover {
+  //  background-color: darkgray;
+  //  color black
+  //}
 `

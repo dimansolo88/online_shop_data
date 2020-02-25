@@ -22,7 +22,7 @@ const Catalog = React.memo(
           <ContainerCatalog>
             <HeaderTitle>
               <BlockTitle> Catalog </BlockTitle>
-              <Search setSearchFilter={setSearchFilter} />
+              <Search setSearchFilter={setSearchFilter} products={products} />
               <LineWrapper />
               <Sort sort={sort} sortFilter={sortFilter} />
             </HeaderTitle>
