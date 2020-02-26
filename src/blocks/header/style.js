@@ -57,6 +57,5 @@ export const WrapperMenu = styled.div`
 `
 
 export const StyleSelect = styled(Select)`
-    width: 200px
-
+  width: 200px;
 `

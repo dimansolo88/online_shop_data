@@ -5,7 +5,8 @@ import {
   HeaderWrapper,
   HiddenShowMenuDesktop,
   Nav,
-  NavMobile, StyleSelect,
+  NavMobile,
+  StyleSelect,
   WrapperMenu,
 } from './style'
 import { Select } from 'antd'
@@ -32,10 +33,7 @@ const Header = () => {
           <Menu />
         </HiddenShowMenuDesktop>
 
-        <StyleSelect
-          defaultValue="dark"
-          onChange={handlerTheme}
-        >
+        <StyleSelect defaultValue="dark" onChange={handlerTheme}>
           <Option value="light">light</Option>
           <Option value="dark">Dark</Option>
         </StyleSelect>

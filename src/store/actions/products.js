@@ -13,11 +13,6 @@ export const setProductsSuccess = products => ({
   payload: products,
 })
 
-export const setSearchFilter = title => ({
-  type: SET_SEARCH_FILTER_VALUE,
-  payload: title,
-})
-
 export const sort = value => ({
   type: SORT_PRODUCTS,
   payload: value,

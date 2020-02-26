@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import { Button, Drawer, Input } from 'antd'
-
-const { Search } = Input
+import { AutoComplete, Button, Drawer } from 'antd'
 
 export const StyledButtonSearch = styled(Button)`
   background-color: darkgray;
@@ -19,15 +17,7 @@ export const StyledButtonSearch = styled(Button)`
 `
 
 export const StyledDrawer = styled(Drawer)``
-export const StyledSearch = styled(Search)`
-  //& button {
-  //  background-color: red;
-  //  color: black
-  //
-  //}
-  //
-  //& button:hover {
-  //  background-color: darkgray;
-  //  color black
-  //}
+
+export const StyledAutoComplete = styled(AutoComplete)`
+  width: 100%;
 `
