@@ -9,22 +9,12 @@ const Search = ({ products }) => {
   const [searchValue, setSearchValue] = useState('')
 
   const debSearch = _.debounce(value => {
-    // setSearchValue(value.toLowerCase())
     if (value.length > 1) {
       setDataSource(
         products.filter(p => p.title.toLowerCase().indexOf(value) !== -1),
       )
     }
   }, 2000)
-
-  // const debounce = value => {
-  //   // setSearchValue(value.toLowerCase())
-  //   if (value.length > 1) {
-  //     setDataSource(
-  //       products.filter(p => p.title.toLowerCase().indexOf(value) !== -1),
-  //     )
-  //   }
-  // }
 
   const searchHandler = value => {
     const searchValue = value.toLowerCase()
@@ -43,6 +33,7 @@ const Search = ({ products }) => {
         dataSource={dataSource}
         // debSearch={debSearch}
         searchHandler={searchHandler}
+        searchValue={searchValue}
       />
     </WrapperSearch>
   )

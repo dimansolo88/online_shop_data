@@ -4,7 +4,7 @@ import { StyledAutoComplete, StyledButtonSearch, StyledDrawer } from './style'
 import PropTypes from 'prop-types'
 import { RenderOption } from '../renderOption/index'
 
-const SearchInput = ({ dataSource, debSearch, searchHandler }) => {
+const SearchInput = ({ dataSource, searchHandler, searchValue }) => {
   const [visible, setVisible] = useState(false)
 
   const showDrawerOnClose = () => {
@@ -29,6 +29,8 @@ const SearchInput = ({ dataSource, debSearch, searchHandler }) => {
           onChange={searchHandler}
           placeholder="input here"
           optionLabelProp="text"
+          value={searchValue}
+          pokpokpok
         >
           <Input suffix={<Icon type="search" />} />
         </StyledAutoComplete>
@@ -39,7 +41,7 @@ const SearchInput = ({ dataSource, debSearch, searchHandler }) => {
 
 SearchInput.propTypes = {
   dataSource: PropTypes.array,
-  debSearch: PropTypes.func,
   searchHandler: PropTypes.func,
+  searchValue: PropTypes.string,
 }
 export default SearchInput

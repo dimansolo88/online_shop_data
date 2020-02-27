@@ -9,10 +9,13 @@ import {
   CatalogWrapper,
   ContainerCatalog,
   HeaderTitle,
+  StyledBlockFilter,
 } from './style'
 import PropTypes from 'prop-types'
 import { childrenPropType } from '@/constants/propTypes '
 import Sort from '../products/sort/container'
+import Filter from '../products/filter/filter'
+import Test from '../products/hgjhg/jkjgjkg'
 
 const Catalog = React.memo(({ products, getProduct, sort, sortFilter }) => {
   return (
@@ -23,7 +26,11 @@ const Catalog = React.memo(({ products, getProduct, sort, sortFilter }) => {
             <BlockTitle> Catalog </BlockTitle>
             <Search products={products} />
             <LineWrapper />
-            <Sort sort={sort} sortFilter={sortFilter} />
+            <StyledBlockFilter>
+              {/* <Sort sort={sort} sortFilter={sortFilter} /> */}
+              {/* <Filter/> */}
+              <Test />
+            </StyledBlockFilter>
           </HeaderTitle>
 
           <div>
@@ -35,11 +42,11 @@ const Catalog = React.memo(({ products, getProduct, sort, sortFilter }) => {
   )
 })
 
-export default Catalog
-
 Catalog.propTypes = {
   products: childrenPropType,
   getProduct: PropTypes.func,
   sort: PropTypes.func,
   sortFilter: PropTypes.string,
 }
+
+export default Catalog

@@ -42,3 +42,10 @@ export const BlockTitle = styled.h2`
   font-size: 30px;
   text-transform: capitalize;
 `
+export const StyledBlockFilter = styled.div`
+  width: 100%;
+  margin: 2rem 0 2rem 0;
+  padding: 0;
+  display: flex;
+  background-color: #eee;
+`
