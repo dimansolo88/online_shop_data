@@ -34,6 +34,7 @@ const Catalog = React.memo(({ products, getProduct, sort, sortFilter }) => {
     </Fade>
   )
 })
+
 export default Catalog
 
 Catalog.propTypes = {
