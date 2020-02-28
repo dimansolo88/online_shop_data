@@ -13,9 +13,7 @@ import {
 } from './style'
 import PropTypes from 'prop-types'
 import { childrenPropType } from '@/constants/propTypes '
-import Sort from '../products/sort/container'
-import Filter from '../products/filter/filter'
-import Test from '../products/hgjhg/jkjgjkg'
+import { FiltersBlock } from '../products/filtersBlock/index'
 
 const Catalog = React.memo(({ products, getProduct, sort, sortFilter }) => {
   return (
@@ -29,7 +27,7 @@ const Catalog = React.memo(({ products, getProduct, sort, sortFilter }) => {
             <StyledBlockFilter>
               {/* <Sort sort={sort} sortFilter={sortFilter} /> */}
               {/* <Filter/> */}
-              <Test />
+              <FiltersBlock sort={sort} sortFilter={sortFilter} />
             </StyledBlockFilter>
           </HeaderTitle>
 

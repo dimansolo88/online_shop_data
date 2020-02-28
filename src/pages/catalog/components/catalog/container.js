@@ -6,6 +6,7 @@ import { getProduct, sort } from '@/store/actions/products'
 
 const mapStateToProps = state => ({
   products: getProductsSelector(state),
+  sortFilter: state.product.sortFilter,
 })
 export default compose(
   connect(mapStateToProps, {
