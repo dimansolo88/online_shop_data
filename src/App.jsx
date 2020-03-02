@@ -6,7 +6,7 @@ import { Provider, LOCALES } from './locale/'
 
 export const ThemeContext = createContext({})
 
-function App() {
+function App () {
   const [theme, setTheme] = useState(theme2)
   const handlerTheme = value => {
     value === 'dark' ? setTheme(theme2) : setTheme(theme1)

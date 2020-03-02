@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Sort from '../sort/container'
 import { StyledDiv } from './style'
 import FilterProductType from './filterProductType/filterProductType'
+import { Loader } from '@/blocks/common/spin'
 
-const FiltersBlock = ({ sort, sortFilter }) => {
+const FiltersBlock = ({ products, sort, sortFilter }) => {
   return (
     <StyledDiv>
       <Sort sort={sort} sortFilter={sortFilter} />
@@ -14,12 +15,16 @@ const FiltersBlock = ({ sort, sortFilter }) => {
       {/* <Sort /> */}
       {/* <Sort /> */}
       {/* <Sort /> */}
-      {/* <FilterProductType /> */}
+      <FilterProductType tags={products} />
+      <FilterProductType tags={products} />
+      <FilterProductType tags={products} />
+      <FilterProductType tags={products} />
     </StyledDiv>
   )
 }
 
 FiltersBlock.propTypes = {
+  products: PropTypes.array,
   sort: PropTypes.func,
   sortFilter: PropTypes.string,
 }

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { AutoComplete } from 'antd'
 import { StyledDiv, StyledSpan } from './style'
 
-function RenderOption(item) {
+function RenderOption (item) {
   const { Option } = AutoComplete
 
   return (

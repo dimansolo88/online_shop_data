@@ -1,7 +1,7 @@
 import { instance } from './instance'
 
 export const getDetailedProductApi = {
-  async getDetailed(id) {
+  async getDetailed (id) {
     try {
       const res = await instance.get(`/products/${id}`)
       return res.data

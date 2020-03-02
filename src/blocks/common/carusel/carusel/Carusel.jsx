@@ -58,8 +58,7 @@ const EmblaCarouselComponent = ({ children }) => {
           <DotBtn
             selected={index === selectedIndex}
             onClick={() => scrollTo(index)}
-            key={index}
-          />
+            key={index} />
         ))}
       </StyledCarouselDots>
     </StyledCarousel>
