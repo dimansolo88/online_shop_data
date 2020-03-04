@@ -4,7 +4,8 @@ export const DotBtn = ({ selected, onClick }) => {
   return (
     <button
       className={`carousel__dot${selected ? ' is-selected' : ''}`}
-      onClick={onClick} />
+      onClick={onClick}
+    />
   )
 }
 

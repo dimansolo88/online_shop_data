@@ -33,7 +33,8 @@ const Search = ({ products }) => {
         dataSource={dataSource}
         // debSearch={debSearch}
         searchHandler={searchHandler}
-        searchValue={searchValue} />
+        searchValue={searchValue}
+      />
     </WrapperSearch>
   )
 }

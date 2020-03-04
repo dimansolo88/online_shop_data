@@ -21,7 +21,7 @@ export const BaseButton = styled.button`
   margin: 0 0 15px;
   padding: 8px 30px;
   z-index: 0;
-  &: after {
+  &::after {
     content: '';
     position: absolute;
     width: 50%;

@@ -1,25 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Sort from '../sort/container'
-import { StyledDiv } from './style'
+import { StyledUl } from './style'
 import FilterProductType from './filterProductType/filterProductType'
-import { Loader } from '@/blocks/common/spin'
 
 const FiltersBlock = ({ products, sort, sortFilter }) => {
   return (
-    <StyledDiv>
-      <Sort sort={sort} sortFilter={sortFilter} />
+    <StyledUl>
+      {/* <Sort sort={sort} sortFilter={sortFilter} /> */}
       {/* <Sort /> */}
       {/* <Sort /> */}
       {/* <Sort /> */}
       {/* <Sort /> */}
       {/* <Sort /> */}
       {/* <Sort /> */}
-      <FilterProductType tags={products} />
-      <FilterProductType tags={products} />
-      <FilterProductType tags={products} />
-      <FilterProductType tags={products} />
-    </StyledDiv>
+      <FilterProductType title="sort" />
+      <FilterProductType title="productType" />
+    </StyledUl>
   )
 }
 

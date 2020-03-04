@@ -30,7 +30,8 @@ const Catalog = React.memo(({ products, getProduct, sort, sortFilter }) => {
               <FiltersBlock
                 sort={sort}
                 sortFilter={sortFilter}
-                products={products} />
+                products={products}
+              />
             </StyledBlockFilter>
           </HeaderTitle>
 
